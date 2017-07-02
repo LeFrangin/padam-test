@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="wrapper">
+    <h1 class="center-align">Vos réservations</h1>
+
+    <div class="center-align actions">
+        <a class="waves-effect waves-light btn-large blue darken-1" href="{% url 'booking_new' %}"><i class="material-icons left">add</i>Nouvelle réservation</a>
+    </div>
+
+    <table class="striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Date de réservation</th>
+                <th>Heure de réservation</th>
+                <th>Adresse de départ</th>
+                <th>Adresse de destination</th>
+                <th>Voiture</th>
+                <th>Temps estimé</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for booking in bookings %}
+            <tr>
+                <td><a href="{% url 'booking_detail' pk=booking.id %}" ><span>Réservation n°{{ booking.id }}</span></a></td>
+                <td>{{ booking.reservation_date }}</td>
+                <td>{{ booking.reservation_hour }}</td>
+                <td>{{ booking.start_address }}</td>
+                <td>{{ booking.dest_address }}</td>
+                <td><a href="{% url 'car_detail' pk=booking.car %}" ><span>Voiture n°{{ booking.car }}</span></a></td>
+                <td>{{ booking.duration }}</td>
+                <td>
+                    <form method="post" action="{% url 'booking_delete' pk=booking.id %}" >
+                        {% csrf_token %}
+                        <button class="waves-effect waves-light btn-floating  red darken-1"><i class="material-icons left">delete</i></button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}

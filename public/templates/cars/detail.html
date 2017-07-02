@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="wrapper">
+    <h1>Voiture n°{{ car.id }}</h1>
+    <div class="sub-wrapper">
+        <ul class="collection">
+            <li class="collection-item">
+                <div>
+                    <b>Nom</b>
+                    <span class="secondary-content">
+                        {{ car.name }}
+                    </span>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div>
+                    <b>Année</b>
+                    <span class="secondary-content">
+                        {{ car.year }}
+                    </span>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div>
+                    <b>Disponible</b>
+                    <span class="secondary-content">
+                        {{ car.disponibility }}
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

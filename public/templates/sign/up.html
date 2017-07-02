@@ -1,0 +1,18 @@
+{% extends 'booking/.html' %}
+{% block content %}
+
+<a href="{% url 'booking_login' %}" ><span>Login</span></a>
+
+<div class="row">
+    <h1 class="center-align">S'inscrire</h1>
+    <form class="col s12" action="{% url "booking_sign_up" %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="row center-align">
+             <button type="submit" class="waves-effect waves-light btn-large blue darken-1"><i class="material-icons left">done</i>Valider</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

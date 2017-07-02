@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="wrapper">
+    <h1 class="center-align">Les voitures</h1>
+
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>ID de la voiture</th>
+                <th>Nom</th>
+                <th>Année</th>
+                <th>Disponible</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for car in cars %}
+            <tr>
+                <td><a href="{% url 'car_detail' pk=car.id %}" ><span>Voiture n°{{ car.id }}</span></a></td>
+                <td>{{ car.name }}</td>
+                <td>{{ car.year }}</td>
+                <td>{{ car.disponibility }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}

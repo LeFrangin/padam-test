@@ -1,0 +1,15 @@
+.actions{
+    margin: 30px 0;
+}
+
+form .errorlist{
+    background-color: #ef5350;
+    text-align: center;
+    color: #FFF;
+    padding: 10px 0;
+}
+
+.helptext{
+    color: #333;
+    font-size: 12px;
+}

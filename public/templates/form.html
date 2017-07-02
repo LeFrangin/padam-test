@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container">
+    <h1 class="center-align">{{ title }}</h1>
+    <div class="row">
+        <form action="{% url form_url %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="button-submit center-align">
+            <button type="submit" class="waves-effect waves-light btn-large blue darken-1"><i class="material-icons left">done</i>Valider</button>
+        </div>
+    </form>
+    </div>
+</div>
+
+{% endblock %}

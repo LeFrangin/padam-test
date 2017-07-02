@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Liste des URLS disponibles</h1>
+
+      <div class="collection">
+        <a href="{% url 'booking_list' %}" class="collection-item active">Bookings</a>
+        <a href="{% url 'car_list' %}" class="collection-item">Cars</a>
+        <a href="{% url 'sign_in' %}" class="collection-item">Sign</a>
+      </div>
+
+</div>
+
+{% endblock %}

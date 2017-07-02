@@ -1,0 +1,61 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="wrapper">
+    <h1>Réservation n°{{ booking.id }}</h1>
+    <div class="sub-wrapper">
+        <ul class="collection">
+            <li class="collection-item">
+                <div>
+                    <b>Date de réservation</b>
+                    <span class="secondary-content">
+                        {{ booking.reservation_date }}
+                    </span>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div>
+                    <b>Heure de réservation</b>
+                    <span class="secondary-content">
+                        {{ booking.reservation_hour }}
+                    </span>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div>
+                    <b>Départ</b>
+                    <span class="secondary-content">
+                        {{ booking.start_address }}
+                    </span>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div>
+                    <b>Destination</b>
+                    <span class="secondary-content">
+                        {{ booking.dest_address }}
+                    </span>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div>
+                    <b>Durée estimée du trajet</b>
+                    <span class="secondary-content">
+                        {{ booking.duration }}
+                    </span>
+                </div>
+            </li>
+            <li class="collection-item">
+                <div>
+                    <b>ID de la voiture</b>
+                    <span class="secondary-content">
+                        {{ booking.car }}
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
