@@ -78,6 +78,6 @@ Un framework CSS / JS a été ajouté pour donner une meilleur lisibilité à l'
 - Materializecss
 
 ## Temps de réalisation
+Commencé le `01/07/2017 à 19h30`
 
-Projet commencé le `01/07/2017 à 19h30`
-Projet fini le `02/07/2017 à 19h00`
+Fini le `02/07/2017 à 19h00`
