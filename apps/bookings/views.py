@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.urls import reverse_lazy
+from cars.models import Cars
 from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
 from django.views.generic import ListView, DeleteView, DetailView, CreateView
 
-from .models import Bookings
-from cars.models import Cars
-
 from helpers import set_car_disponibility, get_duration
+from .models import Bookings
 
 
 class BookingCreate(CreateView):
